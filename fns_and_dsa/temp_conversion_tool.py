@@ -17,19 +17,25 @@ def main():
     print("Temperature Converter")
     print("---------------------")
     
-    # Input temperature in Celsius
-    celsius = float(input("Enter temperature in Celsius: "))
+    # Ask user for temperature value
+    temperature = float(input("Enter the temperature value: "))
     
-    # Convert Celsius to Fahrenheit
-    fahrenheit = celsius_to_fahrenheit(celsius)
-    print(f"{celsius} Celsius is equal to {fahrenheit} Fahrenheit.")
+    # Ask user for the unit of the temperature
+    unit = input("Enter 'C' for Celsius or 'F' for Fahrenheit: ").upper()
     
-    # Input temperature in Fahrenheit
-    fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+    converted_temperature = None
     
-    # Convert Fahrenheit to Celsius
-    celsius = fahrenheit_to_celsius(fahrenheit)
-    print(f"{fahrenheit} Fahrenheit is equal to {celsius} Celsius.")
-
+    if unit == 'C':
+        # Convert Celsius to Fahrenheit
+        converted_temperature = celsius_to_fahrenheit(temperature)
+        print(f"{temperature} Celsius is equal to {converted_temperature} Fahrenheit.")
+    elif unit == 'F':
+        # Convert Fahrenheit to Celsius
+        converted_temperature = fahrenheit_to_celsius(temperature)
+        print(f"{temperature} Fahrenheit is equal to {converted_temperature} Celsius.")
+    else:
+        print("Invalid input. Please enter 'C' or 'F'.")
+        return
+    
 if __name__ == "__main__":
     main()
