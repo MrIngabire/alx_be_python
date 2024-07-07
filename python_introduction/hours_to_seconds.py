@@ -4,7 +4,7 @@ hour = 3600
 
 #calculating seconds
 
-seconds = hours * hour
+seconds = hours * 3600
 
 #print seconds
 
