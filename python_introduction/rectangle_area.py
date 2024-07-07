@@ -9,4 +9,4 @@ area = length * width
 
 #printing the results
 
-print ( f "The area of the rectangle is: {area}"
+print ( f"The area of the rectangle is: {area}"
